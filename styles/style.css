@@ -117,7 +117,6 @@ ol {
   flex-direction: column;
   height: 298px;
   overflow-y: auto;
-  overflow-x: hidden;
   gap: 30px;
 }
 
@@ -129,7 +128,7 @@ ol {
 
 .content__video-card-thumbnail {
   display: block;
-  min-width: 194px;
+  width: 194px;
   height: 103px;
   opacity: 1;
   object-fit: cover;
@@ -147,6 +146,7 @@ ol {
   flex-direction: column;
   flex-grow: 1;
   min-width: 0;
+  gap: 6px;
 }
 
 .search-form__fieldset-title {
@@ -156,7 +156,7 @@ ol {
 }
 
 .title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 75px;
   line-height: 94%;
@@ -182,10 +182,10 @@ ol {
 }
 
 .content__video-card-title {
-  font-family: Oswald;
+  font-family: Oswald, Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: 100%;
+  line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
@@ -211,6 +211,7 @@ ol {
   border: none;
   display: flex;
   flex-direction: column;
+  gap: 5px;
 }
 
 .search-form__label {
@@ -238,9 +239,15 @@ ol {
   border-bottom: 1px solid #fff;
 
   color: #fff;
-  font-size: 18px;
+
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  line-height: 22px;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 1;
+
+  padding-block: 0;
+  padding-inline: 0;
 }
 
 .search-form__checkbox {
@@ -248,17 +255,10 @@ ol {
 }
 
 .search-form__textfield::placeholder {
-  font-family: 'Fira Sans Condensed';
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 1;
-
   color: rgb(255 255 255 / 0.7);
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible),
-.search-form__label:has(.search-form__checkbox:focus-visible) {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid currentColor;
   outline-offset: 2px;
 }
@@ -291,18 +291,14 @@ ol {
   cursor: pointer;
 }
 
-.search-form__pseudo-checkbox:hover {
-  outline: 2px solid #fff;
-}
-
 .button {
   border: 1px solid #fff;
   background-color: transparent;
   color: inherit;
-  font-family: 'Fira Sans Condensed';
+  font-family: 'Fira Sans Condensed', Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 18px;
-  height: 34px;
+  min-height: 34px;
 }
 
 .search-form__submit-button {
